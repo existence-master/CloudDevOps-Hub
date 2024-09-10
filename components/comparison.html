@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cloud DevOps Hub</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "Montserrat", sans-serif;
+				background-color: #020202;
+				color: white;
+			}
+
+			.component {
+				background-color: black;
+				border: 2px solid #9f06ff; /* Purple border */
+				border-radius: 15px;
+				padding: 20px;
+				max-width: 800px;
+				margin: 20px auto;
+				color: white;
+			}
+
+			.component-title-container {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+
+			.component-title {
+				font-size: 1.5em;
+				margin-left: 10px; /* Space between the image and title */
+				font-weight: bold;
+			}
+
+			.component-title img {
+				height: 50px; /* Adjust size of the logo image */
+			}
+
+			.component-content {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.section {
+				flex: 1;
+				padding: 10px;
+			}
+
+			.section-heading {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.section-red {
+				color: red;
+			}
+
+			.section-green {
+				color: green;
+			}
+
+			.section-red ul,
+			.section-green ul {
+				list-style-type: disc;
+				margin-left: 20px;
+			}
+
+			.section-red li,
+			.section-green li {
+				margin-bottom: 5px;
+			}
+
+			@media (max-width: 768px) {
+				.component-content {
+					flex-direction: column;
+				}
+
+				.section-red {
+					border-bottom: 2px solid white; /* Horizontal rule on mobile */
+				}
+			}
+
+			@media (min-width: 769px) {
+				.section-red {
+					border-right: 2px solid white; /* Vertical rule on desktop */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="component">
+			<div class="component-title-container">
+				<img
+					src="logo.png"
+					alt="Cloud DevOps Hub Logo"
+					style="width: 50px; height: 50px"
+				/>
+				<div class="component-title">
+					Cloud DevOps Hub : Your Competitive Edge
+				</div>
+			</div>
+			<div class="component-content">
+				<div class="section section-red">
+					<div class="section-heading">Institute Courses</div>
+					<ul>
+						<li>
+							Higher costs compared to community-driven options.
+						</li>
+						<li>Less flexibility in course schedules.</li>
+						<li>
+							Limited real-world application and case studies.
+						</li>
+						<li>
+							Standardized curriculum may not address specific
+							needs.
+						</li>
+						<li>
+							Potential lack of up-to-date industry practices.
+						</li>
+					</ul>
+				</div>
+				<div class="section section-green">
+					<div class="section-heading">Community Driven Courses</div>
+					<ul>
+						<li>More affordable or even free options.</li>
+						<li>Flexible scheduling tailored to your needs.</li>
+						<li>Practical insights from industry professionals.</li>
+						<li>
+							Curriculum often updated with the latest trends.
+						</li>
+						<li>
+							Opportunities for networking and community support.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
