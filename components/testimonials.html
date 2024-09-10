@@ -43,8 +43,8 @@
 			}
 
 			.testimonial-card {
-				flex: 0 0 300px;
-				margin: 0 10px;
+				flex: 0 0 90%; /* Start with occupying most of the screen */
+				margin: 0 10px 20px; /* Add bottom margin for spacing */
 				background-color: #333;
 				border-radius: 10px;
 				padding: 20px;
@@ -59,7 +59,7 @@
 
 			.testimonial-card .video-container {
 				position: relative;
-				padding-bottom: 56.25%;
+				padding-bottom: 56.25%; /* Aspect ratio 16:9 */
 				height: 0;
 				overflow: hidden;
 				margin-bottom: 20px;
@@ -121,9 +121,20 @@
 			}
 
 			.carousel-nav div.active {
-				background-color: #a352d7;
+				background-color: #4D2C5E;
 			}
 
+			@media (min-width: 768px) {
+				.testimonial-card {
+					flex: 0 0 45%; /* Adjust width for tablets */
+				}
+			}
+
+			@media (min-width: 1024px) {
+				.testimonial-card {
+					flex: 0 0 300px; /* Original width for larger screens */
+				}
+			}
 		</style>
 	</head>
 	<body>
