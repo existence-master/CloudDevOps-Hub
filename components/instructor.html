@@ -1,153 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instructor Section</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Instructor Card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+        }
 
-    body {
-      font-family: "Montserrat", sans-serif;
-      background-color: #1a1a1a;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1E1E1E;
+            border-radius: 10px;
+            padding: 30px;
+            color: white;
+            max-width: 900px;
+            margin: 50px auto;
+            border: 2px solid #6a0dad; /* Purple border */
+            position: relative;
+        }
 
-    .instructor-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      border: 2px solid #9f06ff;
-      border-radius: 15px;
-      background-color: #2a2a2a;
-      max-width: 1100px;
-      width: 90%;
-      height: auto;
-      position: relative;
-    }
+        .text-content {
+            max-width: 500px;
+        }
 
-    .instructor-info {
-      flex: 2;
-      padding-right: 20px;
-    }
+        .text-content h1 {
+            color: #a63df5; /* Bold purple */
+            font-size: 36px;
+            margin: 0;
+        }
 
-    .instructor-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 48px;
-      background: #9F06FF;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 20px;
-    }
+        .text-content p {
+            font-size: 18px;
+            margin-top: 15px;
+            line-height: 1.6;
+            color: #bfbfbf; /* Lighter grey for text */
+        }
 
-    .instructor-description {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
-      color: #e0e0e0;
-    }
+        .profile-picture {
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #6a0dad;
+            width: 354px;
+            height: 354px;
+            background-color: #333;
+            z-index: 2;
+            position: relative;
+        }
 
-    .instructor-image-container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
+        .profile-picture img {
+            width: 354px;
+            height: 354px;
+            object-fit: cover;
+        }
 
-    .instructor-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      background-color: #9f06ff;
-      padding: 5px;
-    }
+        /* Cloud and Gear image styles */
+        .cloud-image {
+            position: absolute;
+            top: 20px;
+            right: 240px;
+            width: 200px;
+            z-index: 1;
+        }
 
-    .gear-icon {
-      position: absolute;
-      bottom: -20px;
-      right: -20px;
-      width: 50px;
-      height: 50px;
-    }
-
-    .cloud-icon {
-      position: absolute;
-      top: 20px;
-      right: -20px;
-      width: 60px;
-      height: 60px;
-    }
-
-    @media (max-width: 768px) {
-      .instructor-section {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .instructor-image {
-        width: 150px;
-        height: 150px;
-      }
-
-      .instructor-title {
-        font-size: 28px;
-        line-height: 38px;
-      }
-
-      .instructor-description {
-        font-size: 16px;
-        line-height: 24px;
-      }
-
-      .gear-icon {
-        width: 40px;
-        height: 40px;
-        bottom: -10px;
-        right: -10px;
-      }
-
-      .cloud-icon {
-        width: 50px;
-        height: 50px;
-        top: 10px;
-        right: -10px;
-      }
-    }
-  </style>
+        .gear-image {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-  <div class="instructor-section">
-    <div class="instructor-info">
-      <div class="instructor-title">Hi, I am Vikas, your course instructor.</div>
-      <div class="instructor-description">
-        With 14+ years of IT experience, Vikas has mentored over 7,000 engineers, led 33+ AWS and GCP Cloud Architect batches, and built a community of 55,000+ DevOps professionals. He holds top certifications in AWS, Google Cloud, and CKAD, and has contributed to over 100+ projects and industry insights. Join Vikas for a transformative journey in Cloud and DevOps excellence.
-      </div>
+
+    <div class="card-container">
+        <div class="text-content">
+            <h1>Hi, I am Vikas, your course instructor.</h1>
+            <p>
+                With 14+ years of IT experience, Vikas has mentored over 7,000 engineers, 
+                led 33+ AWS and GCP Cloud Architect batches, and built a community of 55,000+ DevOps professionals. 
+                He holds top certifications in AWS, Google Cloud, and CKAD, and has contributed to over 
+                100+ projects and industry insights. Join Vikas for a transformative journey in Cloud and DevOps excellence.
+            </p>
+        </div>
+
+        <div class="profile-picture">
+            <img src="Instructor.png" alt="Profile Picture">
+        </div>
+
+        <!-- Cloud and Gear as PNG images -->
+        <img src="cloud.png" alt="Cloud" class="cloud-image">
+        <img src="image 15.png" alt="Gear" class="gear-image">
     </div>
-    <div class="instructor-image-container">
-      <img class="instructor-image" src="Instructor.png" alt="Vikas Instructor Image" />
-      <img class="gear-icon" src="image 15.png" alt="Gear Icon" />
-      <img class="cloud-icon" src="cloud.png" alt="Cloud Icon" />
-    </div>
-  </div>
+
 </body>
 </html>
