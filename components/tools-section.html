@@ -6,156 +6,161 @@
   <title>DevOps Tools Section</title>
   <style>
     body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #000000;
-  }
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000000;
+    }
   
-  .tools-section {
-    text-align: center;
-  }
+    .tools-section {
+      text-align: center;
+      overflow: hidden; /* Prevent scrollbars */
+    }
   
-  h1 {
-    margin-bottom: 20px;
-    background: -webkit-linear-gradient(#D866F6, #9F06FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: xx-large;
-  }
+    h1 {
+      margin-bottom: 20px;
+      background: -webkit-linear-gradient(#D866F6, #9F06FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: xx-large;
+    }
   
-  .icons-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 500px;
-  }
+    .icons-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      height: 500px;
+    }
   
-  .devops-icon {
-    position: absolute;
-    top: 100px;
-    width: 500px;
-    height: 500px;
-  }
+    .devops-icon {
+      position: absolute;
+      top: 100px;
+      width: 500px;
+      height: 500px;
+    }
   
-  .devops-icon img {
-    width: 100%;
-    height: auto;
-  }
+    .devops-icon img {
+      width: 100%;
+      height: auto;
+    }
   
-  /* General styles for all tool icons */
-  .tool-icon {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    transition: transform 0.3s;
-  }
+    /* General styles for all tool icons */
+    .tool-icon {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      transition: transform 0.3s;
+    }
   
-  .tool-icon img {
-    width: 100%;
-    height: auto;
-  }
+    .tool-icon img {
+      width: 100%;
+      height: auto;
+    }
   
-  .tool-icon:hover {
-    transform: scale(1.5);
-  }
+    .tool-icon:hover {
+      transform: scale(1.5);
+    }
   
-  .tool-icon .tooltip {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s;
-  }
+    .tool-icon .tooltip {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+    }
   
-  .tool-icon:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-  }
+    .tool-icon:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
   
-  /* Positioning icons around the main logo */
-  .top {
-    top: 50px;
-  }
+    /* Positioning icons around the main logo */
+    .top {
+      top: 50px;
+    }
   
-  .bottom {
-    bottom: 50px;
-  }
+    .bottom {
+      bottom: 50px;
+    }
   
-  .left {
-    left: 50px;
-  }
+    .left {
+      left: 50px;
+    }
   
-  .right {
-    right: 50px;
-  }
+    .right {
+      right: 50px;
+    }
   
-  .tool-1 { left: 5px; top: 10px; }
-  .tool-2 { left: 130px; top: 10px; }
-  .tool-3 { right: 130px; top: 10px; }
-  .tool-4 { right: 5px; top: 10px; }
+    .tool-1 { left: 5px; top: 10px; }
+    .tool-2 { left: 130px; top: 10px; }
+    .tool-3 { right: 130px; top: 10px; }
+    .tool-4 { right: 5px; top: 10px; }
   
-  .tool-5 { left: 5px; top: 350px; }
-  .tool-6 { left: 130px; top: 370px; }
-  .tool-7 { right: 130px; top: 370px; }
-  .tool-8 { right: 5px; top: 370px; }
+    .tool-5 { left: 5px; top: 350px; }
+    .tool-6 { left: 130px; top: 370px; }
+    .tool-7 { right: 130px; top: 370px; }
+    .tool-8 { right: 5px; top: 370px; }
   
-  .tool-9 { top: 150px; left: -80px; }
-  .tool-10 { bottom: 120px; left: -130px; }
+    .tool-9 { top: 150px; left: -80px; }
+    .tool-10 { bottom: 120px; left: -130px; }
   
-  .tool-11 { top: 150px; right: -80px; }
-  .tool-12 { bottom: 120px; right: -130px; }
+    .tool-11 { top: 150px; right: -80px; }
+    .tool-12 { bottom: 120px; right: -130px; }
   
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: x-large; /* Reduce heading size */
+      margin-bottom: 10px; 
+    }
 
-@media screen and (max-width: 480px) {
-  h1{
-    margin-left: 50px;
-  }
-  .icons-container {
-    width: 300px;
-    height: 300px;
-  }
+    .icons-container {
+      width: 300px;
+      height: 300px;
+    }
 
-  .devops-icon {
-    width: 300px;
-    height: 300px;
-    left:50px;
+    .devops-icon {
+      width: 200px;
+      height: 200px;
+      top: 60px;
+    }
+
+    .tool-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .tool-1 { left: 20px; top: 10px; }
+    .tool-2 { left: 130px; top: 10px; }
+    .tool-3 { right: 130px; top: 10px; }
+    .tool-4 { right: 20px; top: 10px; }
+
+    .tool-5 { left: 20px; top: 220px; }
+    .tool-6 { left: 130px; top: 220px; }
+    .tool-7 { right: 130px; top: 220px; }
+    .tool-8 { right: 20px; top: 220px; }
+
+    .tool-9 { top: 100px; left: -30px; }
+    .tool-10 { bottom: 90px; left: -30px; }
+
+    .tool-11 { top: 100px; right: -30px; }
+    .tool-12 { bottom: 90px; right: -30px; }
+
+    .tool-icon .tooltip {
+      font-size: 10px; /* Reduce tooltip text size */
+    }
   }
-
-  .tool-icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .tool-1 { left: 50px; top: 30px; }
-  .tool-2 { left: 130px; top: 40px; }
-  .tool-3 { right: 10px; top: 30px; }
-  .tool-4 { right: -70px; top: 30px; }
-  
-  .tool-5 { left: 60px; top: 250px; }
-  .tool-6 { left: 150px; top: 280px; }
-  .tool-7 { right: -20px; top: 280px; }
-  .tool-8 { right: -120px; top: 250px; }
-  
-  .tool-9 { top: 120px; left: -10px; }
-  .tool-10 { bottom: 10px; left: -10px; }
-  
-  .tool-11 { top: 100px; right: -120px; }
-  .tool-12 { bottom: 50px; right: -130px; }
-}
-
   </style>
 </head>
 <body>
