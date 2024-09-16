@@ -1,268 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Testimonials Carousel</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<style>
-			body {
-				font-family: Poppins, sans-serif;
-				background-color: black;
-				color: #fff;
-				margin: 0;
-				padding: 0;
-			}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: black;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-			.testimonial-section {
-				text-align: center;
-				padding: 50px 20px;
-				background-color: black;
-			}
+        .testimonial-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: black;
+        }
 
-			.testimonial-section h2 {
-				background: linear-gradient(90deg, #D866F6, #9F06FF);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				font-family: Poppins;
-				font-size: 32px;
-				margin-bottom: 10px;
-			}
+        .testimonial-section h2 {
+            background: linear-gradient(90deg, #D866F6, #9F06FF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: Poppins;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
 
-			.testimonial-section p {
-				color: #ddd;
-				margin-bottom: 40px;
-				font-family: Poppins;
-			}
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 20px;
+            width: 100%;
+        }
 
-			.carousel-container {
-				display: flex;
-				overflow: hidden;
-				justify-content: center;
-				position: relative;
-				background-color: #1A1621;
-				padding: 20px;
-				border-radius: 10px;
-			}
+        .carousel-track {
+            display: inline-flex;
+            animation: scroll 20s linear infinite;
+        }
 
-			.testimonial-card {
-				flex: 0 0 90%; /* Start with occupying most of the screen */
-				margin: 0 10px 20px; /* Add bottom margin for spacing */
-				background-color: #333;
-				border-radius: 10px;
-				padding: 20px;
-				text-align: left;
-				opacity: 0.7;
-				transition: opacity 0.3s ease;
-			}
+        .testimonial-card {
+            flex: 0 0 auto; /* Adjust width based on content */
+            margin: 0 20px;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            min-width: 250px; /* Set a minimum width for small screens */
+        }
 
-			.testimonial-card.active {
-				opacity: 1;
-			}
+        @media (min-width: 768px) {
+            .testimonial-card {
+                min-width: 40%; /* Adjust for tablets */
+            }
+        }
 
-			.testimonial-card .video-container {
-				position: relative;
-				padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-				height: 0;
-				overflow: hidden;
-				margin-bottom: 20px;
-			}
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                min-width: 300px; /* Original width for larger screens */
+            }
+        }
 
-			.testimonial-card .video-container iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
+        .testimonial-card .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
 
-			.testimonial-card .quote {
-				margin-bottom: 20px;
-				font-size: 14px;
-				line-height: 1.6;
-			}
+        .testimonial-card .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-			.testimonial-card .profile {
-				display: flex;
-				align-items: center;
-			}
+        .testimonial-card .quote {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
-			.testimonial-card .profile img {
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				margin-right: 10px;
-			}
+        .testimonial-card .profile {
+            display: flex;
+            align-items: center;
+        }
 
-			.testimonial-card .profile div {
-				display: flex;
-				flex-direction: column;
-			}
+        .testimonial-card .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
 
-			.testimonial-card .profile .name {
-				font-weight: bold;
-			}
+        .testimonial-card .profile div {
+            display: flex;
+            flex-direction: column;
+        }
 
-			.testimonial-card .profile .job-title {
-				font-size: 12px;
-				color: #999;
-			}
+        .testimonial-card .profile .name {
+            font-weight: bold;
+        }
 
-			.carousel-nav {
-				display: flex;
-				justify-content: center;
-				margin-top: 20px;
-			}
+        .testimonial-card .profile .job-title {
+            font-size: 12px;
+            color: #999;
+        }
 
-			.carousel-nav div {
-				width: 10px;
-				height: 10px;
-				background-color: #777;
-				margin: 0 5px;
-				border-radius: 50%;
-				cursor: pointer;
-			}
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%); /* Adjusted for repeating after one another */
+            }
+        }
 
-			.carousel-nav div.active {
-				background-color: #4D2C5E;
-			}
-
-			@media (min-width: 768px) {
-				.testimonial-card {
-					flex: 0 0 45%; /* Adjust width for tablets */
-				}
-			}
-
-			@media (min-width: 1024px) {
-				.testimonial-card {
-					flex: 0 0 300px; /* Original width for larger screens */
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div class="testimonial-section">
-			<h2>
-				What Students Say
-			</h2>
-			<p>
-				Lorem Ipsum is simply dummy text of the printing.
-			</p>
-			<div class="carousel-container">
-				<div class="testimonial-card active">
-					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.facebook.com/reel/3272179519744991" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<div class="quote">
-						"Support to Cloud Job with 3 offer's"
-					</div>
-					<div class="profile">
-						<img src="https://via.placeholder.com/40" alt="Profile Image">
-						<div>
-							<div class="name">
-								Sachin
-							</div>
-							<!-- <div class="job-title">
-								Web Developer
-							</div> -->
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-card">
-					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.facebook.com/reel/395409593088059" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<div class="quote">
-						"Received 3 AWS Offer's in 3 Month's"
-					</div>
-					<div class="profile">
-						<img src="https://via.placeholder.com/40" alt="Profile Image">
-						<div>
-							<div class="name">
-								Khushboo Sinha
-							</div>
-							<!-- <div class="job-title">
-								Web Design
-							</div> -->
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-card">
-					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<div class="quote">
-						"Non Tech to Cloud Engineer 3X Package"
-					</div>
-					<div class="profile">
-						<img src="https://via.placeholder.com/40" alt="Profile Image">
-						<div>
-							<div class="name">
-								Batch-31 Student
-							</div>
-							<!-- <div class="job-title">
-								UI/UX Designer
-							</div> -->
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-card">
-					<div class="video-container">
-						<iframe width="560" height="315" src="https://www.youtube.com/watch?v=wU4yhRhnyKs&list=PLG7MCdO2f2e9fIZ1v2nlfaWNL0zdsnIsy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<div class="quote">
-						"Daily Job offer in Batch"
-					</div>
-					<div class="profile">
-						<img src="https://via.placeholder.com/40" alt="Profile Image">
-						<div>
-							<div class="name">
-								Batch-27 Student
-							</div>
-							<!-- <div class="job-title">
-								UI/UX Designer
-							</div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-nav">
-				<div class="nav-dot active"></div>
-				<div class="nav-dot"></div>
-				<div class="nav-dot"></div>
-				<div class="nav-dot"></div>
-			</div>
-		</div>
-		<script>
-			const cards = document.querySelectorAll(".testimonial-card");
-			const navDots = document.querySelectorAll(".nav-dot");
-			let currentIndex = 0;
-
-			function showCard(index) {
-				cards.forEach((card, i) => {
-					card.classList.toggle("active", i === index);
-				});
-
-				navDots.forEach((dot, i) => {
-					dot.classList.toggle("active", i === index);
-				});
-			}
-
-			navDots.forEach((dot, index) => {
-				dot.addEventListener("click", () => {
-					currentIndex = index;
-					showCard(index);
-				});
-			});
-
-			setInterval(() => {
-				currentIndex = (currentIndex + 1) % cards.length;
-				showCard(currentIndex);
-			}, 3000);
-		</script>
-	</body>
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+<div class="testimonial-section">
+    <h2>
+        What Students Say
+    </h2>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing.
+    </p>
+    <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                            src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2FCloudPathAcademy%2Fvideos%2F3272179519744991%2F&show_text=false&width=560"
+                            style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowTransparency="true"></iframe>
+                </div>
+                <div class="quote">
+                    "Support to Cloud Job with 3 offer's"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Sachin
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                            src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2FCloudPathAcademy%2Fvideos%2F395409593088059%2F&show_text=false&width=560"
+                            style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowTransparency="true"></iframe>
+                </div>
+                <div class="quote">
+                    "Received 3 AWS Offer's in 3 Month's"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Khushboo Sinha
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+            <!-- Duplicate the cards for infinite scroll -->
+              <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="quote">
+                    "Non Tech to Cloud Engineer 3X Package"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Batch-31 Student
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/watch?v=wU4yhRhnyKs&list=PLG7MCdO2f2e9fIZ1v2nlfaWNL0zdsnIsy"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="quote">
+                    "Daily Job offer in Batch"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Batch-27 Student
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                            src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2FCloudPathAcademy%2Fvideos%2F3272179519744991%2F&show_text=false&width=560"
+                            style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowTransparency="true"></iframe>
+                </div>
+                <div class="quote">
+                    "Support to Cloud Job with 3 offer's"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Sachin
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                            src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2FCloudPathAcademy%2Fvideos%2F395409593088059%2F&show_text=false&width=560"
+                            style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowTransparency="true"></iframe>
+                </div>
+                <div class="quote">
+                    "Received 3 AWS Offer's in 3 Month's"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Khushboo Sinha
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+            <!-- Duplicate the cards for infinite scroll -->
+              <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="quote">
+                    "Non Tech to Cloud Engineer 3X Package"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Batch-31 Student
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/watch?v=wU4yhRhnyKs&list=PLG7MCdO2f2e9fIZ1v2nlfaWNL0zdsnIsy"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="quote">
+                    "Daily Job offer in Batch"
+                </div>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile Image">
+                    <div>
+                        <div class="name">
+                            Batch-27 Student
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
