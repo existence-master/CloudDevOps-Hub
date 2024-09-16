@@ -1405,71 +1405,77 @@
 				<p>Logoipsum</p>
 			</div>
 
-			<!-- Duplicate the content for seamless infinite scroll -->
-			<div>
-				<img
-					src="https://via.placeholder.com/50x50?text=Logo1"
-					alt="Logo 1"
-				/>
-				<p>Logoipsum</p>
-			</div>
-			<div>
-				<img
-					src="https://via.placeholder.com/50x50?text=Logo2"
-					alt="Logo 2"
-				/>
-				<p>Logoipsum</p>
-			</div>
-			<div>
-				<img
-					src="https://via.placeholder.com/50x50?text=Logo3"
-					alt="Logo 3"
-				/>
-				<p>Logoipsum</p>
-			</div>
-			<div>
-				<img
-					src="https://via.placeholder.com/50x50?text=Logo4"
-					alt="Logo 4"
-				/>
-				<p>Logoipsum</p>
-			</div>
-			<div>
-				<img
-					src="https://via.placeholder.com/50x50?text=Logo5"
-					alt="Logo 5"
-				/>
-				<p>Logoipsum</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="testimonial-section" id="1726135523067">
-	<h2>What Students Say</h2>
-	<p>Lorem Ipsum is simply dummy text of the printing.</p>
-	<div class="carousel-container">
-		<div class="testimonial-card active">
-			<div class="video-container">
-				<iframe
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen=""
-				></iframe>
-			</div>
-			<div class="quote">
-				"There are many variations of passages of Lorem Ipsum available,
-				but the majority have suffered alteration in some form, by
-				injected humour."
-			</div>
-			<div class="profile">
-				<img src="https://via.placeholder.com/40" alt="Profile Image" />
-				<div>
-					<div class="name">Finlay Kirk</div>
-					<div class="job-title">Web Developer</div>
+			<div class="hero-content">
+				<div class="left-section">
+					<h1>
+						2.5 Months Live, <br>
+						100% Real-Time <br>
+						Multi-Cloud &amp; <br>
+						DevOps Bootcamp <br>
+						with Placement!
+					</h1>
+					<div class="placeholder-container">
+						<div class="sphere-container">
+							<div class="sphere" data-name="Student 1">
+								<img src="https://via.placeholder.com/150" alt="Student 1">
+								<div class="tooltip">Student</div>
+							</div>
+							<div class="sphere" data-name="Student 2">
+								<img src="https://via.placeholder.com/150" alt="Student 2">
+								<div class="tooltip">Student</div>
+							</div>
+							<div class="sphere" data-name="Student 3">
+								<img src="https://via.placeholder.com/150" alt="Student 3">
+								<div class="tooltip">Student</div>
+							</div>
+							<div class="sphere" data-name="Student 4">
+								<img src="https://via.placeholder.com/150" alt="Student 4">
+								<div class="tooltip">Student</div>
+							</div>
+							<div class="sphere" data-name="Student 5">
+								<img src="https://via.placeholder.com/150" alt="Student 5">
+								<div class="tooltip">Student</div>
+							</div>
+							<script>
+								document
+									.querySelectorAll(".sphere")
+									.forEach((sphere) => {
+										sphere.addEventListener(
+											"mouseenter",
+											function () {
+												const tooltip =
+													this.querySelector(
+														".tooltip"
+													)
+												tooltip.style.animation = "none" // Reset animation
+
+												setTimeout(() => {
+													tooltip.style.animation =
+														"bounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards"
+												}, 10) // Small delay to restart the animation smoothly
+											}
+										)
+									})
+							</script>
+						</div>
+						<p class="join-text">
+							Join over
+							<span style="color: rgb(159, 6, 255); --darkreader-inline-color: #8c2cc9;" data-darkreader-inline-color="">4000+</span>
+							students
+						</p>
+					</div>
+					<div class="button-group">
+						<button class="btn primary" fdprocessedid="r3n6ub">Introduction Video</button>
+						<button class="btn primary" fdprocessedid="iwhtyf">Join Now</button>
+					</div>
+				</div>
+
+				<div class="right-section">
+					<div class="carousel">
+						<img src="/CloudDevOps-Hub/assets/placeholder1.jpg" alt="Image 1" class="carousel-img">
+						<button class="prev" fdprocessedid="xdwvjm"></button>
+						<button class="next" fdprocessedid="3ricj7"></button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1497,26 +1503,120 @@
 					<div class="job-title">Web Design</div>
 				</div>
 			</div>
-		</div>
-		<div class="testimonial-card">
-			<div class="video-container">
-				<iframe
-					width="560"
-					height="315"
-					src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen=""
-				></iframe>
-			</div>
-			<div class="quote">
-				"There are many variations of passages of Lorem Ipsum available,
-				but the majority have suffered alteration in some form, by
-				injected humour."
-			</div>
-			<div class="profile">
-				<img src="https://via.placeholder.com/40" alt="Profile Image" />
+		</div><div class="features" id="1726136713285">
+        <!-- Left Section -->
+        <div class="left-section">
+            <small>Why we’re your</small>
+            <h1>Best Cloud &amp; DevOps Learning Choice?</h1>
+            <p>Cloud DevOps Hub helping to Learn &amp; Grow together for the last 15+ years.</p>
+            <button class="explore-btn" fdprocessedid="7yw3i">Explore Courses</button>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="feature-container">
+                <!-- Feature 1 -->
+                <div class="feature" id="feature-1">
+                    <img src="/CloudDevOps-Hub/assets/icon1.svg" alt="Icon 1" class="feature-icon">
+                    <h2>Feature 1</h2>
+                    <p>Learn the basics of Cloud Computing.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature" id="feature-2">
+                    <img src="/CloudDevOps-Hub/assets/icon2.svg" alt="Icon 2" class="feature-icon">
+                    <h2>Feature 2</h2>
+                    <p>Master DevOps Tools and Techniques.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature" id="feature-3">
+                    <img src="/CloudDevOps-Hub/assets/icon1.svg" alt="Icon 3" class="feature-icon">
+                    <h2>Feature 3</h2>
+                    <p>Advanced AWS &amp; Azure Cloud Training.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature" id="feature-4">
+                    <img src="/CloudDevOps-Hub/assets/icon2.svg" alt="Icon 4" class="feature-icon">
+                    <h2>Feature 4</h2>
+                    <p>Automate with Kubernetes and Docker.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature" id="feature-5">
+                    <img src="/CloudDevOps-Hub/assets/icon1.svg" alt="Icon 5" class="feature-icon">
+                    <h2>Feature 5</h2>
+                    <p>Monitor and scale applications easily.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature" id="feature-6">
+                    <img src="/CloudDevOps-Hub/assets/icon2.svg" alt="Icon 6" class="feature-icon">
+                    <h2>Feature 6</h2>
+                    <p>Deploy faster using CI/CD pipelines.</p>
+                </div>
+                <!-- Feature 7 -->
+                <div class="feature" id="feature-7">
+                    <img src="/CloudDevOps-Hub/assets/icon1.svg" alt="Icon 7" class="feature-icon">
+                    <h2>Feature 7</h2>
+                    <p>Security best practices in DevOps.</p>
+                </div>
+                <!-- Feature 8 -->
+                <div class="feature" id="feature-8">
+                    <img src="/CloudDevOps-Hub/assets/icon2.svg" alt="Icon 8" class="feature-icon">
+                    <h2>Feature 8</h2>
+                    <p>Optimize performance with cloud analytics.</p>
+                </div>
+            </div>
+        </div>
+    </div> <div class="instructor">
+        <div class="text-content">
+            <h1>Hi, I am Vikas, your course instructor.</h1>
+            <p>
+                With 14+ years of IT experience, Vikas has mentored over 7,000 engineers, 
+                led 33+ AWS and GCP Cloud Architect batches, and built a community of 55,000+ DevOps professionals. 
+                He holds top certifications in AWS, Google Cloud, and CKAD, and has contributed to over 
+                100+ projects and industry insights. Join Vikas for a transformative journey in Cloud and DevOps excellence.
+            </p>
+        </div>
+
+        <div class="profile-picture">
+            <img src="/CloudDevOps-Hub/assets/Instructor.png" alt="Profile Picture">
+        </div>
+
+        <!-- Cloud and Gear as PNG images -->
+        <img src="/CloudDevOps-Hub/assets/cloud.png" alt="Cloud" class="cloud-image">
+        <img src="/CloudDevOps-Hub/assets/gear.svg" alt="Gear" class="gear-image">
+    </div><div class="difference" id="1726136540978">
+        <div class="header">
+            <img src="/CloudDevOps-Hub/assets/logo.png" alt="Cloud DevOps Hub Logo" class="logo">
+            <div class="title">
+                Cloud DevOps Hub : Your Competitive Edge
+            </div>
+        </div>
+        <div class="content">
+            <div class="section section-red">
+                <div class="section-heading">Institute Courses</div>
+                <ul class="section-red-list">
+                    <li>Higher costs compared to community-driven options.</li>
+                    <li>Less flexibility in course schedules.</li>
+                    <li>Limited real-world application and case studies.</li>
+                    <li>Standardized curriculum may not address specific needs.</li>
+                    <li>Potential lack of up-to-date industry practices.</li>
+                </ul>
+            </div>
+            <div class="section section-green">
+                <div class="section-heading">Community Driven Courses</div>
+                <ul class="section-green-list">
+                    <li>More affordable or even free options.</li>
+                    <li>Flexible scheduling tailored to your needs.</li>
+                    <li>Practical insights from industry professionals.</li>
+                    <li>Curriculum often updated with the latest trends.</li>
+                    <li>Opportunities for networking and community support.</li>
+                </ul>
+            </div>
+        </div>
+    </div><div class="stats-section" id="1726135638903">
+			<h2>Top Placement Statistics</h2>
+			<div class="scroll-container">
+				<div class="scroll-content">
+				<!-- Logos and Text -->
 				<div>
 					<div class="name">Clara R. Altman</div>
 					<div class="job-title">UI/UX Designer</div>
@@ -1560,99 +1660,10 @@
 					eum natus error, ipsa ullam ipsam.
 				</p>
 			</div>
-		</div>
-		<div class="faq">
-			<div class="faq-question">
-				<h3>How can I track my order?</h3>
-				<span class="faq-toggle">+</span>
-			</div>
-			<div class="faq-answer">
-				<p>
-					You can track your order using the tracking number provided
-					in the confirmation email.
-				</p>
-			</div>
-		</div>
-		<div class="faq">
-			<div class="faq-question">
-				<h3>What payment methods are accepted?</h3>
-				<span class="faq-toggle">+</span>
-			</div>
-			<div class="faq-answer">
-				<p>
-					We accept Visa, Mastercard, PayPal, and other major payment
-					methods.
-				</p>
-			</div>
-		</div>
-		<div class="faq">
-			<div class="faq-question">
-				<h3>Can I change my shipping address?</h3>
-				<span class="faq-toggle">+</span>
-			</div>
-			<div class="faq-answer">
-				<p>
-					Yes, you can change your shipping address before the order
-					is processed.
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="cta-section" id="1726135719387">
-	<h2>Ready to learn Cloud &amp; DevOps from the expert?</h2>
-	<p>Lorem Ipsum is simply dummy text of the printing.</p>
-	<button class="btn-explore" fdprocessedid="u2fdpu">Explore Courses</button>
-</div>
-<div class="footer" id="1726135719387">
-	<div class="footer-content">
-		<div class="newsletter">
-			<input
-				type="email"
-				placeholder="Signup to stay in the loop"
-				fdprocessedid="tjbia"
-			/>
-			<button fdprocessedid="5pvxa1k">Subscribe</button>
-		</div>
-		<div class="menu">
-			<div>
-				<h3>Help Menu</h3>
-				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Features</a></li>
-					<li><a href="#">Works</a></li>
-					<li><a href="#">Career</a></li>
-				</ul>
-			</div>
-			<div>
-				<h3>Product</h3>
-				<ul>
-					<li><a href="#">Essential Landing Page</a></li>
-					<li><a href="#">Alpha Dashboard Pro</a></li>
-					<li><a href="#">Karnel Admin Dashboard</a></li>
-					<li><a href="#">Gray UI Kit</a></li>
-				</ul>
-			</div>
-			<div class="logo">
-				<img src="https://via.placeholder.com/150" alt="Logo" />
-				<p>Cloud DevOps Hub</p>
-			</div>
-		</div>
-	</div>
-	<!-- Bottom Bar -->
-	<div class="bottom-bar">
-		<div class="bottom-bar-content">
-			<span> New DevOps Course Batch starts 10 August 2024 </span>
-			<button class="btn-join-now" fdprocessedid="r538bk">
-				<a href="#"> Join Now </a>
-			</button>
-		</div>
-	</div>
-</div>
-<script>
-	let currentImageIndex = 0
-	const images = ["../assets/placeholder1.jpg", "../assets/placeholder2.jpg"]
-	const carouselImg = document.querySelector(".carousel-img")
+		</div><script>
+          let currentImageIndex = 0
+			const images = ["/CloudDevOps-Hub/assets/placeholder1.jpg", "/CloudDevOps-Hub/assets/placeholder2.jpg"]
+			const carouselImg = document.querySelector(".carousel-img")
 
 	document.querySelector(".next").addEventListener("click", () => {
 		currentImageIndex = (currentImageIndex + 1) % images.length
