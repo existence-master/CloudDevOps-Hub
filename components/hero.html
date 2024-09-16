@@ -146,8 +146,6 @@
 				right: 10px;
 			}
 
-			
-
 			.placeholder-container {
 				display: flex;
 				align-items: center;
@@ -163,7 +161,6 @@
 					font-size: 2.5em;
 				}
 
-
 				.carousel {
 					width: 100%;
 					height: auto;
@@ -178,8 +175,6 @@
 					flex-direction: column;
 					margin-top: 10px;
 				}
-
-	
 			}
 
 			/* Breakpoint for larger screens (e.g., tablets in landscape or small desktops) */
@@ -388,7 +383,7 @@
 				<div class="right-section">
 					<div class="carousel">
 						<img
-							src="/assets/placeholder1.jpg"
+							src="../assets/placeholder1.jpg"
 							alt="Image 1"
 							class="carousel-img"
 						/>
@@ -397,12 +392,14 @@
 					</div>
 				</div>
 			</div>
-
 		</section>
 
 		<script>
 			let currentImageIndex = 0
-			const images = ["/assets/placeholder1.jpg", "/assets/placeholder2.jpg"]
+			const images = [
+				"../assets/placeholder1.jpg",
+				"../assets/placeholder2.jpg"
+			]
 			const carouselImg = document.querySelector(".carousel-img")
 
 			document.querySelector(".next").addEventListener("click", () => {
