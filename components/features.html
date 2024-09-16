@@ -1,202 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Cloud & DevOps Learning</title>
-		<link
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud & DevOps Learning</title>
+    <link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
+    <style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-			body {
-				font-family: Montserrat, sans-serif;
-				background-color: #000000;
-				color: #ffffff;
-			}
+body {
+    font-family: Montserrat, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
 
-			.container {
-				border: 2px solid #8c00ff;
-				border-radius: 20px;
-				padding: 5% 5%;
-				display: flex;
-				align-items: flex-start; /* Aligns the content to the top */
-				justify-content: space-between;
-				width: 80%;
-				margin: 7% auto; /* Adjusted margin for a higher position */
-			}
+.container {
+    border: 2px solid #8c00ff;
+    border-radius: 20px;
+    padding: 5% 5% ;
+    display: flex;
+    align-items: flex-start; /* Aligns the content to the top */
+    justify-content: space-between;
+    width: 80%;
+    margin: 7% auto; /* Adjusted margin for a higher position */
+   
+}
 
-			.left-section {
-				width: 45%;
-			}
+.left-section {
+    width: 45%;
+}
 
-			.left-section h1 {
-				font-size: 2.5rem; /* Larger font size */
-				font-weight: bold;
-				color: #ffffff;
-				margin-bottom: 20px; /* Space it out from the paragraph */
-			}
+.left-section h1 {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px; /* Space it out from the paragraph */
+}
 
-			.left-section small {
-				font-size: 1rem;
-				color: #ff8a00;
-			}
 
-			.left-section p {
-				color: rgb(162, 157, 157);
-				font-size: 1.2rem;
-				margin: 15px 0;
-				margin-bottom: 30px;
-			}
+.left-section small {
+    font-size: 1rem;
+    color: #FF8A00;
+}
 
-			.explore-btn {
-				background-color: #9f06ff;
-				color: white;
-				border: none;
-				padding: 12px 24px; /* Adjust padding for better button size */
-				cursor: pointer;
-				font-size: 1rem;
-				font-weight: 500;
-				border-radius: 5px;
-				margin-top: 20px; /* Increase margin for spacing */
-				transition: background-color 0.3s, transform 0.3s;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-				font-family: Montserrat, sans-serif;
-				cursor: pointer;
-				animation: colorChange 5s infinite; /* Apply animation */
-			}
+.left-section p {
+    color: rgb(162, 157, 157);
+    font-size: 1.2rem;
+    margin: 15px 0;
+    margin-bottom: 30px;
+}
 
-			@keyframes colorChange {
-				0% {
-					background-color: #9d00fe;
-				}
-				25% {
-					background-color: #d103ff;
-				}
-				50% {
-					background-color: #9d00fe;
-				}
-				75% {
-					background-color: #d103ff; /* Gold */
-				}
-				100% {
-					background-color: #9d00fe; /* Back to Green */
-				}
-			}
+.explore-btn {
+    background-color: #9F06FF;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Adjust padding for better button size */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 20px; /* Increase margin for spacing */
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+    animation: colorChange 5s infinite; /* Apply animation */
+}
 
-			.explore-btn:hover {
-				background-color: #5b00ab;
-				animation: none;
-				transform: translateY(-3px); /* Subtle hover lift */
-			}
+@keyframes colorChange {
+  0% {
+    background-color: #9d00fe;
+  }
+  25% {
+    background-color: #d103ff; 
+  }
+  50% {
+    background-color: #9d00fe;
+  }
+  75% {
+    background-color: #d103ff; /* Gold */
+  }
+  100% {
+    background-color: #9d00fe; /* Back to Green */
+  }
+}
 
-			.right-section {
-				margin-left: 20%;
-				width: 48%; /* Slightly reduced width for better balance */
-				overflow: hidden;
-				height: 320px; /* Slight increase in height for two features */
-			}
+.explore-btn:hover {
+    background-color: #5b00ab;
+    animation: none;
+    transform: translateY(-3px); /* Subtle hover lift */
+}
 
-			.feature {
-				display: flex;
-				flex-direction: column;
-				padding: 30px 0; /* Adjust padding for more balanced spacing */
-				height: 160px; /* Adjust height for better spacing */
-				border-bottom: solid 2px #66666632;
-			}
 
-			.feature-icon {
-				width: 50px; /* Slightly larger icon size */
-				height: 50px;
-				margin-bottom: 15px;
-				padding: 10px 10px;
-				border-radius: 50%;
-				border: 1px solid white;
-			}
+.right-section {
+    margin-left: 20%;
+    width: 48%; /* Slightly reduced width for better balance */
+    overflow: hidden;
+    height: 320px; /* Slight increase in height for two features */
+}
 
-			.feature h2 {
-				font-size: 1.2rem;
-				margin-bottom: 8px;
-			}
+.feature {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0; /* Adjust padding for more balanced spacing */
+    height: 160px; /* Adjust height for better spacing */
+    border-bottom: solid 2px #66666632;
+}
 
-			.feature p {
-				font-size: 0.95rem;
-				color: #666; /* Lighter text color for better readability */
-			}
+.feature-icon {
+    width: 50px; /* Slightly larger icon size */
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
 
-			.feature-container {
-				display: flex;
-				flex-direction: column;
-				animation: scrollFeatures 8s linear infinite;
-			}
+.feature h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
 
-			/* Auto-scroll: Moves one feature up at a time, adding smooth transitions */
-			@keyframes scrollFeatures {
-				0%,
-				10% {
-					transform: translateY(0);
-				}
-				20%,
-				30% {
-					transform: translateY(-160px);
-				} /* Height changed to match .feature */
-				40%,
-				50% {
-					transform: translateY(-320px);
-				}
-				60%,
-				70% {
-					transform: translateY(-480px);
-				}
-				80%,
-				90% {
-					transform: translateY(-640px);
-				}
-				100% {
-					transform: translateY(-800px);
-				} /* Ends after the last feature */
-			}
+.feature p {
+    font-size: 0.95rem;
+    color: #666; /* Lighter text color for better readability */
+}
 
-			@media (max-width: 768px) {
-				.container {
-					flex-direction: column; /* Stack the left and right sections */
-					align-items: center; /* Center content */
-				}
 
-				.left-section,
-				.right-section {
-					width: 100%;
-					margin: 20px 0;
-				}
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    animation: scrollFeatures 8s linear infinite;
+}
 
-				.left-section h1 {
-					font-size: 1.8rem;
-				}
 
-				.explore-btn {
-					padding: 10px 16px;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<!-- Left Section -->
-			<div class="left-section">
-				<small>Why we’re your</small>
-				<h1>Best Cloud & DevOps Learning Choice?</h1>
-				<p>
-					Cloud DevOps Hub helping to Learn & Grow together for the
-					last 15+ years.
-				</p>
-				<button class="explore-btn">Explore Courses</button>
-			</div>
+/* Auto-scroll: Moves one feature up at a time, adding smooth transitions */
+@keyframes scrollFeatures {
+    0%, 10% { transform: translateY(0); }
+    20%, 30% { transform: translateY(-160px); } /* Height changed to match .feature */
+    40%, 50% { transform: translateY(-320px); }
+    60%, 70% { transform: translateY(-480px); }
+    80%, 90% { transform: translateY(-640px); }
+    100% { transform: translateY(-800px); } /* Ends after the last feature */
+}
 
 
 
