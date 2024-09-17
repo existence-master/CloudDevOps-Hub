@@ -1,150 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Cloud DevOps Hub</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps Courses Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+            color: white; /* Set text color to white for contrast */
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .comparison-title {
+            text-align: center;
+            padding: 25px;
+            font-size: 2em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #D866F6, #9F06FF);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+        }
+        .comparison-header, .comparison-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        .comparison-header {
+            background-color: #222;
+            font-weight: 600;
+            color: #9f06ff;
+        }
+        .comparison-header div, .comparison-row div {
+            flex: 1;
+            text-align: center;
+        }
+        .comparison-header div:first-child, .comparison-row div:first-child {
+            text-align: left;
+        }
+        .comparison-header div:last-child, .comparison-row div:last-child {
+            text-align: right;
+        }
+        .comparison-row div {
+            font-size: 1.1em;
+            color: #fff;
+        }
+        .comparison-row:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        .comparison-row:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .check {
+            color: #4CAF50;
+            font-size: 1.5em;
+        }
+        .cross {
+            color: #FF3D00;
+            font-size: 1.5em;
+        }
+        .comparison-item-header {
+            font-weight: 600;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .comparison-header, .comparison-row {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="comparison-container">
+        <div class="comparison-title">
+            Cloud DevOps Hub: Your Competitive Edge
+        </div>
+        
+        <div class="comparison-header">
+            <div>Institute Courses</div>
+            <div>Feature</div>
+            <div>Community Driven Courses</div>
+        </div>
 
-			body {
-				font-family: "Montserrat", sans-serif;
-				background-color: #020202;
-				color: white;
-			}
+        <div class="comparison-row">
+            <div><span class="cross">✖</span> Higher costs compared to community-driven options</div>
+            <div>Price</div>
+            <div><span class="check">✔</span> More affordable or even free options</div>
+        </div>
 
-			.component {
-				background-color: black;
-				border: 2px solid #9f06ff; /* Purple border */
-				border-radius: 15px;
-				padding: 20px;
-				max-width: 800px;
-				margin: 20px auto;
-				color: white;
-			}
+        <div class="comparison-row">
+            <div><span class="cross">✖</span> Less flexibility in course schedules</div>
+            <div>Flexibility</div>
+            <div><span class="check">✔</span> Flexible scheduling tailored to your needs</div>
+        </div>
 
-			.component-title-container {
-				display: flex;
-				align-items: center;
-				margin-bottom: 20px;
-			}
+        <div class="comparison-row">
+            <div><span class="cross">✖</span> Limited real-world application and case studies</div>
+            <div>Real-World Application</div>
+            <div><span class="check">✔</span> Practical insights from industry professionals</div>
+        </div>
 
-			.component-title {
-				font-size: 1.5em;
-				margin-left: 10px; /* Space between the image and title */
-				font-weight: bold;
-			}
+        <div class="comparison-row">
+            <div><span class="cross">✖</span> Standardized curriculum may not address specific needs</div>
+            <div>Customization</div>
+            <div><span class="check">✔</span> Curriculum often updated with the latest trends</div>
+        </div>
 
-			.component-title img {
-				height: 50px; /* Adjust size of the logo image */
-			}
+        <div class="comparison-row">
+            <div><span class="cross">✖</span> Potential lack of up-to-date industry practices</div>
+            <div>Industry Relevance</div>
+            <div><span class="check">✔</span> Opportunities for networking and community support</div>
+        </div>
 
-			.component-content {
-				display: flex;
-				flex-wrap: wrap;
-			}
-
-			.section {
-				flex: 1;
-				padding: 10px;
-			}
-
-			.section-heading {
-				font-weight: bold;
-				margin-bottom: 10px;
-			}
-
-			.section-red {
-				color: red;
-			}
-
-			.section-green {
-				color: green;
-			}
-
-			.section-red ul,
-			.section-green ul {
-				list-style-type: disc;
-				margin-left: 20px;
-			}
-
-			.section-red li,
-			.section-green li {
-				margin-bottom: 5px;
-			}
-
-			@media (max-width: 768px) {
-				.component-content {
-					flex-direction: column;
-				}
-
-				.section-red {
-					border-bottom: 2px solid white; /* Horizontal rule on mobile */
-				}
-			}
-
-			@media (min-width: 769px) {
-				.section-red {
-					border-right: 2px solid white; /* Vertical rule on desktop */
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div class="component">
-			<div class="component-title-container">
-				<img
-					src="../assets/logo.png"
-					alt="Cloud DevOps Hub Logo"
-					style="width: 50px; height: 50px"
-				/>
-				<div class="component-title">
-					Cloud DevOps Hub : Your Competitive Edge
-				</div>
-			</div>
-			<div class="component-content">
-				<div class="section section-red">
-					<div class="section-heading">Institute Courses</div>
-					<ul>
-						<li>
-							Higher costs compared to community-driven options.
-						</li>
-						<li>Less flexibility in course schedules.</li>
-						<li>
-							Limited real-world application and case studies.
-						</li>
-						<li>
-							Standardized curriculum may not address specific
-							needs.
-						</li>
-						<li>
-							Potential lack of up-to-date industry practices.
-						</li>
-					</ul>
-				</div>
-				<div class="section section-green">
-					<div class="section-heading">Community Driven Courses</div>
-					<ul>
-						<li>More affordable or even free options.</li>
-						<li>Flexible scheduling tailored to your needs.</li>
-						<li>Practical insights from industry professionals.</li>
-						<li>
-							Curriculum often updated with the latest trends.
-						</li>
-						<li>
-							Opportunities for networking and community support.
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</body>
+    </div>
+</body>
 </html>

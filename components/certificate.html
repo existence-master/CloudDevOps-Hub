@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .certificate-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #2b2b2b;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .certificate-section img {
+            max-width: 250px;
+            margin-right: 30px;
+        }
+
+        .certificate-content {
+            flex: 1;
+        }
+
+        .certificate-content h2 {
+            font-size: 2.2em;
+            color: #d866ff;
+            margin-bottom: 20px;
+        }
+
+        .certificate-content p {
+            font-size: 1.2em;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .certificate-content a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #9f06ff;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .certificate-content a:hover {
+            background-color: #d866ff;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .certificate-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .certificate-section img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="certificate-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/3682/3682837.png" alt="Certificate Vector">
+        <div class="certificate-content">
+            <h2>After learning, get a certificate</h2>
+            <p>
+                Showcase your newly acquired skills with a professional certificate.
+                Our courses ensure you gain hands-on experience and validation that can be
+                shared with employers or on platforms like LinkedIn.
+            </p>
+            <a href="#get-started">Get Your Certificate</a>
+        </div>
+    </section>
+
+</body>
+</html>
