@@ -16,6 +16,8 @@
 			}
 
 			.stats-section {
+				display: flex;
+				flex-direction: column;
 				text-align: center;
 				padding: 50px 0;
 				background-color: black;
@@ -65,6 +67,27 @@
 				font-size: 1em; /* Use relative font size */
 			}
 
+			.view-more-btn {
+				display: block; 
+				margin: 30px auto; /* Center the button horizontally */
+				padding: 15px 30px;
+				font-family: "Montserrat", sans-serif;
+				font-weight: bold;
+				font-size: 18px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #9f06ff;
+				color: white;
+				border: none;
+				border-radius: 25px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.view-more-btn:hover {
+				background-color: #6a0dad; /* Darker purple on hover */
+			}
+
 			@keyframes scroll {
 				0% {
 					transform: translateX(0);
@@ -78,6 +101,9 @@
 			@media (max-width: 768px) {
 				.scroll-content div:nth-child(n+3) {
 					display: none;
+				}
+				.view-more-btn {
+					margin: 20px auto; /* Adjust margin for smaller screens */
 				}
 			}
 
@@ -136,5 +162,6 @@
 				</div>
 			</div>
 		</div>
+		<a href="#" class="view-more-btn">View More</a> 
 	</body>
 </html>

@@ -106,6 +106,27 @@
 				font-size: 18px;
 			}
 
+			.join-now-btn {
+				display: block; 
+				margin: 30px auto; /* Center the button horizontally */
+				padding: 15px 30px;
+				font-family: "Montserrat", sans-serif;
+				font-weight: bold;
+				font-size: 18px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #9f06ff;
+				color: white;
+				border: none;
+				border-radius: 25px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.join-now-btn:hover {
+				background-color: #6a0dad; /* Darker purple on hover */
+			}
+
 			@media (max-width: 768px) {
 				.container {
 					flex-direction: column;
@@ -123,6 +144,9 @@
 
 				.image-17 {
 					max-width: 100%; /* Ensure full-width image on smaller screens */
+				}
+				.join-now-btn {
+					margin: 20px auto; /* Adjust margin for smaller screens */
 				}
 			}
 		</style>
@@ -164,6 +188,7 @@
 						<span>40% Theory + 60% Practical</span>
 					</div>
 				</div>
+				<a href="#" class="join-now-btn">Join Now</a> 
 			</div>
 		</div>
 	</body>
