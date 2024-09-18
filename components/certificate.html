@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,12 +28,13 @@
         }
 
         .certificate-section img {
-            max-width: 250px;
-            margin-right: 30px;
+            width: 50%; /* Adjust image to take half of the section */
+            height: auto;
         }
 
         .certificate-content {
             flex: 1;
+            padding-left: 30px; /* Add some space between image and content */
         }
 
         .certificate-content h2 {
@@ -53,11 +55,11 @@
             padding: 12px 25px;
             background-color: #9f06ff;
             color: white;
-            text-transform: uppercase;
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
             transition: background-color 0.3s;
+            font-family: Montserrat, sans-serif;
         }
 
         .certificate-content a:hover {
@@ -72,15 +74,21 @@
             }
 
             .certificate-section img {
+                width: 100%; /* Full width image for mobile */
                 margin-bottom: 20px;
+            }
+
+            .certificate-content {
+                padding-left: 0; /* Remove padding on mobile */
             }
         }
     </style>
 </head>
+
 <body>
 
     <section class="certificate-section">
-        <img src="https://cdn-icons-png.flaticon.com/512/3682/3682837.png" alt="Certificate Vector">
+        <img src="../assets/certificate.jpg" alt="Certificate Vector">
         <div class="certificate-content">
             <h2>After learning, get a certificate</h2>
             <p>
@@ -93,4 +101,5 @@
     </section>
 
 </body>
+
 </html>
