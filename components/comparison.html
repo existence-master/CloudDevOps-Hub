@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: "Montserrat", sans-serif;
-            background:black;
-            color: white; /* Set text color to white for contrast */
+            background: black;
+            color: white;
             padding: 20px;
             overflow-x: hidden;
         }
@@ -27,7 +27,6 @@
             font-size: 2em;
             font-weight: 700;
             color: #9F06FF;
-			
         }
         .comparison-header, .comparison-row {
             display: flex;
@@ -41,8 +40,7 @@
         }
         .comparison-header {
             font-weight: 600;
-             color: #9F06FF;
-			
+            color: #9F06FF;
         }
         .comparison-header div, .comparison-row div {
             flex: 1;
@@ -80,6 +78,29 @@
             .comparison-header, .comparison-row {
                 flex-direction: column;
                 text-align: center;
+            }
+            .comparison-header div, .comparison-row div {
+                text-align: center;
+            }
+            .comparison-container {
+                padding: 10px;
+            }
+            .comparison-title {
+                font-size: 1.5em;
+                padding: 20px 10px;
+            }
+            .comparison-header, .comparison-row {
+                padding: 10px;
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .comparison-title {
+                font-size: 1.2em;
+            }
+            .comparison-header, .comparison-row {
+                font-size: 0.9em;
+                padding: 8px;
             }
         }
     </style>
