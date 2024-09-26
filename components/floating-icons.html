@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Icons Effect - Random Directions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            height: 100vh;
+        }
+        .floating-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .floating-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0;
+        }
+        @keyframes float {
+            0%, 10% {
+                opacity: 0;
+            }
+            20%, 80% {
+                opacity: 1;
+            }
+            90%, 100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-container" id="iconContainer"></div>
+
+    <script>
+        const iconContainer = document.getElementById('iconContainer');
+        const iconUrls = [
+            'https://img.icons8.com/color/96/jenkins.png',
+            'https://img.icons8.com/color/96/amazon-web-services.png',
+            'https://img.icons8.com/color/96/google-cloud.png',
+            'https://img.icons8.com/color/96/docker.png',
+            'https://img.icons8.com/color/96/kubernetes.png',
+            'https://img.icons8.com/color/96/terraform.png',
+        ]; 
+        const iconCount = 10; 
+
+        function createIcon() {
+            const icon = document.createElement('img');
+            icon.src = iconUrls[Math.floor(Math.random() * iconUrls.length)];
+            icon.classList.add('floating-icon');
+
+            // Random starting position
+            let startX = Math.random() * window.innerWidth;
+            let startY = Math.random() * window.innerHeight;
+            icon.style.left = `${startX}px`;
+            icon.style.top = `${startY}px`;
+
+            // Random direction and speed
+            let angle = Math.random() * Math.PI * 2;
+            let speed = 1 + Math.random() * 2;
+            let vx = Math.cos(angle) * speed;
+            let vy = Math.sin(angle) * speed;
+
+            // Animation duration and delay
+            const duration = 10 + Math.random() * 10;
+            icon.style.animation = `float ${duration}s infinite`;
+            icon.style.animationDelay = `${Math.random() * duration}s`;
+
+            iconContainer.appendChild(icon);
+
+            function updatePosition() {
+                let x = parseFloat(icon.style.left);
+                let y = parseFloat(icon.style.top);
+
+                x += vx;
+                y += vy;
+
+                // Bounce off edges
+                if (x < 0 || x > window.innerWidth - 40) {
+                    x = Math.max(0, Math.min(x, window.innerWidth - 40));
+                    vx *= -1;
+                }
+                if (y < 0 || y > window.innerHeight - 40) {
+                    y = Math.max(0, Math.min(y, window.innerHeight - 40));
+                    vy *= -1;
+                }
+
+                icon.style.left = `${x}px`;
+                icon.style.top = `${y}px`;
+
+                requestAnimationFrame(updatePosition);
+            }
+
+            updatePosition();
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                startX = Math.random() * window.innerWidth;
+                startY = Math.random() * window.innerHeight;
+                icon.style.left = `${startX}px`;
+                icon.style.top = `${startY}px`;
+            });
+        }
+
+        for (let i = 0; i < iconCount; i++) {
+            createIcon();
+        }
+    </script>
+</body>
+</html>

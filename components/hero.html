@@ -24,35 +24,33 @@
 			}
 
 			.hero {
-				padding: 20px;
+				padding: 10px; /* Reduced padding */
 				text-align: center;
 				background-repeat: no-repeat;
-				background-size: 800px 800px;
 				background-size: cover;
 				z-index: -1;
 			}
 
-			/* Add styles for glowing and bold text */
 			.hero-top-text {
 				background-color: rgba(72, 69, 210, 0.25);
 				color: orange;
-				padding: 10px 30px;
+				padding: 5px 15px; /* Reduced padding */
 				border-radius: 25px;
-				font-size: 1.2em;
-				margin-bottom: 20px;
-				font-weight: bold; /* Make the text bold */
-				animation: glow 3s infinite alternate; /* Apply the glow animation */
+				font-size: 1em; /* Reduced font size */
+				margin-bottom: 10px; /* Reduced margin */
+				font-weight: bold;
+				animation: glow 1.5s infinite alternate;
 			}
 
-			/* Define the glow animation */
 			@keyframes glow {
-				from {
-					text-shadow: 0 0 10px orange;
+				0% {
+					box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange;
 				}
-				to {
-					text-shadow: 0 0 20px orange;
+				100% {
+					box-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 50px orange;
 				}
 			}
+
 
 			.hero-content {
 				display: flex;
@@ -61,33 +59,33 @@
 
 			.left-section {
 				flex: 1;
-				padding: 20px;
+				padding: 10px; /* Reduced padding */
 				text-align: left;
 			}
 
 			.left-section h1 {
-				font-size: 3em;
-				line-height: 1.2;
+				font-size: 2.5em; /* Reduced font size */
+				line-height: 1.1;
 			}
 
 			.join-text {
-				margin-top: 10px;
-				font-size: 1.2em;
+				margin-top: 5px; /* Reduced margin */
+				font-size: 1em; /* Reduced font size */
 				color: white;
-				margin-left: 20px;
+				margin-left: 10px; /* Reduced margin */
 			}
 
 			.button-group {
-				margin-top: 20px;
+				margin-top: 10px; /* Reduced margin */
 			}
 
 			.btn {
-				padding: 10px 20px;
+				padding: 8px 16px; /* Reduced padding */
 				border: none;
 				border-radius: 25px;
 				cursor: pointer;
-				font-size: 1.1em;
-				margin-right: 20px;
+				font-size: 0.9em; /* Reduced font size */
+				margin-right: 10px; /* Reduced margin */
 				font-family: Montserrat, sans-serif;
 			}
 
@@ -102,15 +100,15 @@
 
 			.right-section {
 				flex: 1;
-				padding: 20px;
+				padding: 10px; /* Reduced padding */
 				text-align: center;
 			}
 
 			.carousel {
 				display: flex; /* Align carousel items side by side */
 				position: relative;
-				width: 400px;
-				height: 400px;
+				width: 300px; /* Reduced width */
+				height: 300px; /* Reduced height */
 				margin: 0 auto;
 				overflow: hidden; /* Hide images that go beyond the container */
 			}
@@ -161,7 +159,7 @@
 				}
 
 				.left-section h1 {
-					font-size: 2em;
+					font-size: 1.8em; /* Reduced font size */
 				}
 
 				.carousel {
@@ -183,30 +181,30 @@
 			/* Breakpoint for larger screens (e.g., tablets in landscape or small desktops) */
 			@media (max-width: 1200px) {
 				.left-section h1 {
-					font-size: 3em;
+					font-size: 2.5em; /* Reduced font size */
 				}
 			}
 			@media (min-width: 1400px) {
 				.hero {
-					padding-left: 200px;
-					padding-right: 200px;
+					padding-left: 150px; /* Reduced padding */
+					padding-right: 150px; /* Reduced padding */
 				}
 			}
 
 			/* Breakpoint for medium-sized screens (e.g., tablets and small laptops) */
 			@media (max-width: 992px) {
 				.left-section h1 {
-					font-size: 2.5em;
+					font-size: 2em; /* Reduced font size */
 				}
 			}
 
 			/* Breakpoint for very small screens (e.g., mobile phones in portrait) */
 			@media (max-width: 576px) {
 				.left-section h1 {
-					font-size: 1.5em;
+					font-size: 1.3em; /* Reduced font size */
 				}
 				.hero-top-text {
-					font-size: 0.9rem;
+					font-size: 0.8rem; /* Reduced font size */
 				}
 				.button-group {
 					width: 100%;
@@ -222,17 +220,17 @@
 
 			.sphere {
 				position: relative;
-				width: 50px; /* Change to 50px */
-				height: 50px; /* Change to 50px */
+				width: 40px; /* Reduced sphere size */
+				height: 40px; /* Reduced sphere size */
 				background-color: #9f06ff;
 				border-radius: 50%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adjust shadow for smaller spheres */
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
 				transition: transform 0.3s ease;
 				z-index: 1; /* Make sure the sphere is properly stacked */
-				margin-left: -20px; /* Adjust margin for overlap */
+				margin-left: -15px; /* Adjusted margin for overlap */
 			}
 
 			.sphere:first-child {
@@ -241,28 +239,28 @@
 
 			.sphere img {
 				border-radius: 50%;
-				padding: 2px; /* Adjust padding for smaller spheres */
+				padding: 1px; /* Reduced padding */
 				object-fit: cover;
 				width: 100%;
 				height: 100%;
 			}
 
 			.sphere:hover {
-				transform: scale(1.2); /* Adjust scale for smaller spheres */
+				transform: scale(1.1); /* Adjusted scale */
 				z-index: 2; /* Bring the hovered sphere to the front */
 			}
 
 			.tooltip {
 				position: absolute;
-				top: -50px; /* Position above the sphere */
+				top: -40px; /* Position above the sphere */
 				left: 50%;
 				transform: translateX(-50%) translateY(0); /* Initial tooltip position */
-				padding: 10px 20px;
+				padding: 5px 10px; /* Reduced padding */
 				background-color: #020202;
 				color: white;
 				border: 2px solid #9f06ff;
 				border-radius: 10px;
-				font-size: 14px;
+				font-size: 12px; /* Reduced font size */
 				visibility: hidden;
 				opacity: 0;
 				transition: opacity 0.3s ease;
@@ -282,19 +280,19 @@
 					transform: translateX(-50%) translateY(0);
 				}
 				20% {
-					transform: translateX(-45%) translateY(-10px); /* Move slightly to the right and up */
+					transform: translateX(-45%) translateY(-8px); /* Move slightly to the right and up */
 				}
 				40% {
-					transform: translateX(-48%) translateY(-5px); /* Move left slightly and down */
+					transform: translateX(-48%) translateY(-4px); /* Move left slightly and down */
 				}
 				60% {
-					transform: translateX(-52%) translateY(-15px); /* Move right and further up */
+					transform: translateX(-52%) translateY(-12px); /* Move right and further up */
 				}
 				80% {
-					transform: translateX(-50%) translateY(-8px); /* Return closer to center */
+					transform: translateX(-50%) translateY(-6px); /* Return closer to center */
 				}
 				100% {
-					transform: translateX(-50%) translateY(-10px); /* Final position */
+					transform: translateX(-50%) translateY(-8px); /* Final position */
 				}
 			}
 		</style>

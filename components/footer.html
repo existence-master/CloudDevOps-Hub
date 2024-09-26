@@ -1,214 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>CTA and Footer Section</title>
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bottom Bar Component</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-			body {
-				margin: 0;
-				font-family: 'Poppins', sans-serif;
-				background-color: #111;
-				color: #fff;
-			}
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #111;
+        color: #fff;
+      }
 
-			.footer {
-				background-color: black;
-				padding: 50px 20px;
-			}
+      .bottom-bar {
+        margin-top: 30px;
+        text-align: center;
+        padding: 20px;
+        background-color: #2d2d2d;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 14px;
+        width: 90%;
+        margin: 0 auto;
+      }
 
-			.footer .footer-content {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				flex-wrap: wrap;
-				max-width: 1200px;
-				margin: 0 auto;
-			}
+      .bottom-bar .bottom-bar-content {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+      }
 
-			.footer .newsletter {
-				display: flex;
-				align-items: center;
-			}
+      .bottom-bar .bottom-bar-content span {
+        background: linear-gradient(90deg, #cd10ff, #9f06ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        font-family: 'Poppins';
+        font-size: 20px;
+      }
 
-			.footer .newsletter input {
-				padding: 12px 20px;
-				border: none;
-				border-radius: 30px 0 0 30px;
-				outline: none;
-				width: 300px;
-				max-width: 100%;
-				font-size: 14px;
-				background-color: #fff;
-				color: #333;
-			}
+      .bottom-bar .btn-join-now {
+        padding: 12px 24px;
+        background: linear-gradient(90deg, #cd10ff, #9f06ff);
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
 
-			.footer .newsletter button {
-				padding: 12px 20px;
-				background: linear-gradient(90deg, #CD10FF, #9F06FF);
-				border: none;
-				border-radius: 0 30px 30px 0;
-				color: #fff;
-				cursor: pointer;
-				font-size: 14px;
-				transition: background-color 0.3s ease;
-			}
+      .bottom-bar .btn-join-now:hover {
+        background-color: #8f3ec2;
+      }
 
-			.footer .newsletter button:hover {
-				background: linear-gradient(90deg, #CD10FF, #9F06FF);
-			}
+      .bottom-bar .btn-join-now a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-			.footer .menu {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 50px;
-			}
-
-			.footer .menu div {
-				flex: 1;
-			}
-
-			.footer .menu h3 {
-				font-size: 18px;
-				margin-bottom: 15px;
-				color: #9F06FF;
-			}
-
-			.footer .menu ul {
-				list-style-type: none;
-				padding: 0;
-			}
-
-			.footer .menu ul li {
-				margin-bottom: 10px;
-			}
-
-			.footer .menu ul li a {
-				color: white;
-				text-decoration: none;
-				font-size: 14px;
-				transition: color 0.3s ease;
-			}
-
-			.footer .menu ul li a:hover {
-				color: #fff;
-			}
-
-			.footer .logo {
-				display: flex;
-				gap: 20px;
-			}
-
-			.footer .logo img {
-				width: 120px;
-				margin-bottom: 15px;
-			}
-
-			.footer .bottom-bar {
-				margin-top: 30px;
-				text-align: center;
-				padding: 20px;
-				background: linear-gradient(90deg, #CD10FF, #9F06FF);
-				color: #fff;
-				font-size: 14px;
-				border-radius: 3%;
-				padding: 5px;
-			}
-
-			.footer .bottom-bar .bottom-bar-content {
-				display: flex;
-				gap: 30px;
-				justify-content: space-between; 
-				padding: 20px;
-				background-color: black;
-				align-items: center;
-			}
-
-			.footer .bottom-bar .bottom-bar-content span {
-				background: linear-gradient(90deg, #CD10FF, #9F06FF);
-				background-clip: text;
-				-webkit-background-clip: text;
-				color: transparent;
-				font-weight: bold;
-				font-family: "Poppins";
-				font-size: 20px;
-			}
-
-			.footer .bottom-bar button a {
-				color: white;
-				text-decoration: none;
-				font-weight: bold;
-			}
-
-			.footer .bottom-bar button a:hover {
-				text-decoration: underline;
-			}
-
-			.bottom-bar .btn-join-now {
-				padding: 12px 24px;
-				background: linear-gradient(90deg, #CD10FF, #9F06FF);
-				color: #fff;
-				border: none;
-				border-radius: 30px;
-				cursor: pointer;
-				font-size: 16px;
-				transition: background-color 0.3s ease;
-			}
-
-			.bottom-bar .btn-join-now:hover {
-				background-color: #8f3ec2;
-			}
-			
-		</style>
-	</head>
-	<body>
-		<!-- Footer Section -->
-		<div class="footer">
-			<div class="footer-content">
-				<div class="newsletter">
-					<input type="email" placeholder="Signup to stay in the loop" />
-					<button>Subscribe</button>
-				</div>
-				<div class="menu">
-					<div>
-					<h3>Help Menu</h3>
-					<ul>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Works</a></li>
-						<li><a href="#">Career</a></li>
-					</ul>
-					</div>
-					<div>
-					<h3>Product</h3>
-					<ul>
-						<li><a href="#">Essential Landing Page</a></li>
-						<li><a href="#">Alpha Dashboard Pro</a></li>
-						<li><a href="#">Karnel Admin Dashboard</a></li>
-						<li><a href="#">Gray UI Kit</a></li>
-					</ul>
-					</div>
-					<div class="logo">
-						<img src="https://via.placeholder.com/150" alt="Logo">
-						<p>Cloud DevOps Hub</p>
-					</div>
-				</div>
-			</div>
-			<!-- Bottom Bar -->
-			<div class="bottom-bar">
-				<div class="bottom-bar-content">
-					<span>
-						New DevOps Course Batch starts 10 August 2024 
-					</span>
-					<button class="btn-join-now">
-						<a href="#">
-							Join Now
-						</a>
-					</button>
-				</div>
-			</div>
-		</div>
-	</body>
+      .bottom-bar .btn-join-now a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Bottom Bar Component -->
+    <div class="bottom-bar">
+      <div class="bottom-bar-content">
+        <span>New DevOps Course Batch starts 10 August 2024</span>
+        <button class="btn-join-now">
+          <a href="#">Join Now</a>
+        </button>
+      </div>
+    </div>
+  </body>
 </html>

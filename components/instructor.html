@@ -22,28 +22,28 @@
 				justify-content: space-between;
 				background-color: black;
 				border-radius: 10px;
-				padding: 30px;
+				padding: 20px; /* Reduced padding */
 				color: white;
-				max-width: 900px;
-				margin: 50px auto;
+				max-width: 800px; /* Reduced max-width */
+				margin: 40px auto; /* Reduced margin */
 				border: 2px solid #6a0dad; /* Purple border */
 				position: relative;
 			}
 
 			.text-content {
-				max-width: 500px;
+				max-width: 400px; /* Reduced max-width */
 			}
 
 			.text-content h1 {
 				color: #a63df5; /* Bold purple */
-				font-size: 36px;
+				font-size: 30px; /* Reduced font size */
 				margin: 0;
 			}
 
 			.text-content p {
-				font-size: 18px;
-				margin-top: 15px;
-				line-height: 1.6;
+				font-size: 16px; /* Reduced font size */
+				margin-top: 10px; /* Reduced margin */
+				line-height: 1.5; /* Reduced line height */
 				color: #bfbfbf; /* Lighter grey for text */
 			}
 
@@ -51,33 +51,33 @@
 				border-radius: 50%;
 				overflow: hidden;
 				border: 5px solid #6a0dad;
-				width: 354px;
-				height: 354px;
+				width: 280px; /* Reduced size */
+				height: 280px; /* Reduced size */
 				background-color: #333;
 				z-index: 2;
 				position: relative;
 			}
 
 			.profile-picture img {
-				width: 354px;
-				height: 354px;
+				width: 280px; /* Reduced size */
+				height: 280px; /* Reduced size */
 				object-fit: cover;
 			}
 
 			/* Cloud and Gear image styles */
 			.cloud-image {
 				position: absolute;
-				top: 20px;
-				right: 240px;
-				width: 200px;
+				top: 15px;
+				right: 180px; /* Adjusted position */
+				width: 150px; /* Reduced size */
 				z-index: 1;
 			}
 
 			.gear-image {
 				position: absolute;
-				bottom: 20px;
-				right: 20px;
-				width: 100px;
+				bottom: 15px;
+				right: 15px;
+				width: 80px; /* Reduced size */
 				z-index: 1;
 			}
 
@@ -88,65 +88,65 @@
 				}
 
 				.text-content {
-					margin-bottom: 20px;
+					margin-bottom: 15px; /* Reduced margin */
 				}
 
 				.profile-picture {
-					width: 250px;
-					height: 250px;
+					width: 200px; /* Reduced size */
+					height: 200px; /* Reduced size */
 				}
 
 				.profile-picture img {
-					width: 250px;
-					height: 250px;
+					width: 200px; /* Reduced size */
+					height: 200px; /* Reduced size */
 				}
 
 				.cloud-image {
-					bottom: 10px;
-					top:unset;
-					left: 10px; /* Center the image horizontally */
-					width: 150px;
-					position: absolute;
-				}
-
-				.gear-image {
-					bottom: 10px;
-					right: 10px;
-					width: 80px;
-				}
-			} 
-
-			@media only screen and (max-width: 480px) {
-				.card-container {
-					padding: 20px;
-				}
-
-				.text-content {
-					margin-bottom: 10px;
-				}
-
-				.profile-picture {
-					width: 200px;
-					height: 200px;
-				}
-
-				.profile-picture img {
-					width: 200px;
-					height: 200px;
-				}
-
-				.cloud-image {
-					top: unset;
 					bottom: 5px;
-					left: 5px;
-					right:unset;
-					width: 100px;
+					top:unset;
+					left: 5px; /* Center the image horizontally */
+					width: 120px; /* Reduced size */
+					position: absolute;
 				}
 
 				.gear-image {
 					bottom: 5px;
 					right: 5px;
-					width: 60px;
+					width: 60px; /* Reduced size */
+				}
+			} 
+
+			@media only screen and (max-width: 480px) {
+				.card-container {
+					padding: 15px; /* Reduced padding */
+				}
+
+				.text-content {
+					margin-bottom: 5px; /* Reduced margin */
+				}
+
+				.profile-picture {
+					width: 150px; /* Reduced size */
+					height: 150px; /* Reduced size */
+				}
+
+				.profile-picture img {
+					width: 150px; /* Reduced size */
+					height: 150px; /* Reduced size */
+				}
+
+				.cloud-image {
+					top: unset;
+					bottom: 3px;
+					left: 3px;
+					right:unset;
+					width: 80px; /* Reduced size */
+				}
+
+				.gear-image {
+					bottom: 3px;
+					right: 3px;
+					width: 40px; /* Reduced size */
 				}
 			}
 		</style>
