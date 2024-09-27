@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floating Icons Effect - Random Directions</title>
+    <title>DevOps Icons - Floating Cloud Effect</title>
     <style>
         body {
             margin: 0;
@@ -12,106 +12,79 @@
             background-color: #f0f0f0;
             height: 100vh;
         }
-        .floating-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+
         .floating-icon {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            opacity: 0;
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+            transition: transform 0.2s linear;
         }
+
         @keyframes float {
-            0%, 10% {
-                opacity: 0;
+            0% {
+                transform: translate(0, 0);
             }
-            20%, 80% {
-                opacity: 1;
-            }
-            90%, 100% {
-                opacity: 0;
+            100% {
+                transform: translate(100vw, 100vh);
             }
         }
     </style>
 </head>
 <body>
-    <div class="floating-container" id="iconContainer"></div>
-
+    <div id="iconContainer"></div>
     <script>
         const iconContainer = document.getElementById('iconContainer');
         const iconUrls = [
-            'https://img.icons8.com/color/96/jenkins.png',
             'https://img.icons8.com/color/96/amazon-web-services.png',
             'https://img.icons8.com/color/96/google-cloud.png',
             'https://img.icons8.com/color/96/docker.png',
             'https://img.icons8.com/color/96/kubernetes.png',
             'https://img.icons8.com/color/96/terraform.png',
-        ]; 
-        const iconCount = 10; 
+            'https://img.icons8.com/color/96/jenkins.png',
 
-        function createIcon() {
+        ];
+
+        const totalIcons = 10; // Number of floating icons
+        const icons = [];
+
+        function createFloatingIcon() {
             const icon = document.createElement('img');
             icon.src = iconUrls[Math.floor(Math.random() * iconUrls.length)];
             icon.classList.add('floating-icon');
 
-            // Random starting position
-            let startX = Math.random() * window.innerWidth;
-            let startY = Math.random() * window.innerHeight;
-            icon.style.left = `${startX}px`;
-            icon.style.top = `${startY}px`;
+            // Set random starting position
+            icon.style.left = `${Math.random() * 100}vw`;
+            icon.style.top = `${Math.random() * 100}vh`;
 
-            // Random direction and speed
-            let angle = Math.random() * Math.PI * 2;
-            let speed = 1 + Math.random() * 2;
-            let vx = Math.cos(angle) * speed;
-            let vy = Math.sin(angle) * speed;
+            // Set a random floating animation
+            const randomDuration = 5 + Math.random() * 10; // Duration between 5s and 15s
+            icon.style.animation = `float ${randomDuration}s linear infinite alternate`;
 
-            // Animation duration and delay
-            const duration = 10 + Math.random() * 10;
-            icon.style.animation = `float ${duration}s infinite`;
-            icon.style.animationDelay = `${Math.random() * duration}s`;
-
+            // Add the icon to the container
             iconContainer.appendChild(icon);
+            icons.push(icon);
 
-            function updatePosition() {
-                let x = parseFloat(icon.style.left);
-                let y = parseFloat(icon.style.top);
-
-                x += vx;
-                y += vy;
-
-                // Bounce off edges
-                if (x < 0 || x > window.innerWidth - 40) {
-                    x = Math.max(0, Math.min(x, window.innerWidth - 40));
-                    vx *= -1;
-                }
-                if (y < 0 || y > window.innerHeight - 40) {
-                    y = Math.max(0, Math.min(y, window.innerHeight - 40));
-                    vy *= -1;
-                }
-
-                icon.style.left = `${x}px`;
-                icon.style.top = `${y}px`;
-
-                requestAnimationFrame(updatePosition);
-            }
-
-            updatePosition();
-
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                startX = Math.random() * window.innerWidth;
-                startY = Math.random() * window.innerHeight;
-                icon.style.left = `${startX}px`;
-                icon.style.top = `${startY}px`;
-            });
+            // Randomize the movement
+            animateIcon(icon);
         }
 
-        for (let i = 0; i < iconCount; i++) {
-            createIcon();
+        function animateIcon(icon) {
+            // Generate random coordinates to move the icon to
+            const randomX = Math.random() * 100 - 50; // Random horizontal movement (-50vw to 50vw)
+            const randomY = Math.random() * 100 - 50; // Random vertical movement (-50vh to 50vh)
+
+            icon.style.transform = `translate(${randomX}vw, ${randomY}vh)`;
+
+            // Recursively change the icon position every few seconds
+            setTimeout(() => animateIcon(icon), 3000 + Math.random() * 2000); // Change position every 3-5 seconds
         }
+
+        // Create multiple floating icons
+        for (let i = 0; i < totalIcons; i++) {
+            createFloatingIcon();
+        }
+
     </script>
 </body>
 </html>
