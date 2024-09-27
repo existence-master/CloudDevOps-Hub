@@ -102,6 +102,10 @@
 				transform: scale(1.5);
 			}
 
+			.big-tool-icon:hover{
+				transform: scale(1.5);
+			}
+
 			.tool-icon .tooltip {
 				position: absolute;
 				bottom: -20px;
@@ -118,6 +122,11 @@
 			}
 
 			.tool-icon:hover .tooltip {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.big-tool-icon .tooltip {
 				opacity: 1;
 				visibility: visible;
 			}
@@ -380,16 +389,22 @@
 					/>
 				</div>
 				<div class ="aws-icon">
+					<div class="big-tool-icon top tool-1">
 					<img
 						src="../assets/aws-icon.svg"
 						alt="AWS LOGO"
 					/>
+					<span class="tooltip">Amazon Web Services</span>
+				</div>
 				</div>
 				<div class ="cloud-icon">
+					<div class="big-tool-icon top tool-1">
 					<img
 						src="../assets/cloud-icon.svg"
 						alt="Google Cloud Icon"
 					/>
+					<span class="tooltip">Google Cloud</span>
+				</div>
 				</div>
 			</div>
 				<!-- Surrounding Icons -->
