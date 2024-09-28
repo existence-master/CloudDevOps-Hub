@@ -24,6 +24,11 @@
         font-size: 14px;
         width: 90%;
         margin: 0 auto;
+        /* Add border */
+        position: relative;
+        border: 5px solid transparent;
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+        animation: glowBorder 2s infinite alternate;
       }
 
       .bottom-bar .bottom-bar-content {
@@ -35,7 +40,7 @@
       }
 
       .bottom-bar .bottom-bar-content span {
-        color:white;
+        color: white;
         font-weight: bold;
         font-family: 'Poppins';
         font-size: 20px;
@@ -108,6 +113,16 @@
           font-size: 12px;
         }
       }
+
+      /* Glowing border animation */
+     @keyframes glowBorder{
+			0% {
+				box-shadow: 0 0 5px #9f06ff, 0 0 10px #9f06ff, 0 0 15px #9f06ff, 0 0 20px #9f06ff;
+			}
+			100% {
+				box-shadow: 0 0 10px #9f06ff, 0 0 15px #9f06ff, 0 0 30px #9f06ff, 0 0 40px #9f06ff;
+			}
+		}
     </style>
   </head>
   <body>
